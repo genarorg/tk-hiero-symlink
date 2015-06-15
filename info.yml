@@ -1,0 +1,30 @@
+# expected fields in the configuration file for this app
+configuration:
+
+    #general settings
+    template_symlinks:
+        type: template
+        fields: context, CustomEntity01, Sequence, Shot
+        description: A reference to a template which sets the location for symlinks to be written to.
+    server_root:
+        type: str
+        description: The root path to the configuration install in the file server_root
+    server_user:
+        type: str
+        description: The ssh user to use to connect to the server
+    server_password:
+        type: str
+        description: The password to user to connecto the server
+    server_address:
+        type: str
+        description: The server address to connect to.
+
+# the engines that this app can operate in:
+supported_engines: [tk-hiero]
+
+# the Shotgun fields that this app needs in order to operate correctly
+requires_shotgun_fields:
+
+# More verbose description of this item
+display_name: "Create Symlinks"
+description: "SGTK application for hiero that creates symlinks from selected track items into their respective shots according to the current pipeline configuration"
